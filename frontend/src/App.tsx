@@ -201,10 +201,6 @@ export default function App() {
                   </option>
                 ))}
               </select>
-              <small className="field-note">
-                参考音色改为固定预设列表。当前预设包含“正太”：
-                <code>https://cdn.kuse.ai/tutorials/readvoice.wav</code>
-              </small>
             </label>
 
             <label className="field">
@@ -221,10 +217,6 @@ export default function App() {
           <div className="preset-card">
             <span className="preset-label">固定情感预设</span>
             <strong>{emotionPreset.name}</strong>
-            <p>
-              合成时会把 <code>emotion_prompt</code> 固定传为
-              <code>{emotionPreset.emotionPrompt}</code>
-            </p>
           </div>
 
           <div className="meta-row">
@@ -239,15 +231,6 @@ export default function App() {
 
         <aside className="result-card">
           <p className="panel-title">生成结果</p>
-          <p className="result-copy">
-            参考音色来自固定预设；情感参考固定使用
-            <code>{emotionPreset.name}</code>
-            ，并把
-            <code>{emotionPreset.emotionPrompt}</code>
-            作为
-            <code>emotion_prompt</code>
-            传给推理服务。
-          </p>
 
           {job ? (
             <div className="progress-card">
